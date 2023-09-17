@@ -34,8 +34,7 @@
     height: auto;
 }
 .pagination {
-    text-align: right;
-    margin-top: 20px;
+
 }
 .circle {
     display: inline-block;
@@ -73,6 +72,8 @@
     display: none;
 }
 .pagination  {
+    text-align: right;
+    margin-top: 20px;
     display: flex;    
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -87,8 +88,20 @@
     animation-name: showTitle;
     animation-duration: 1s;
 }
-
 @keyframes showTitle {
     from {opacity: 0}
     to {opacity: 1;}
+}
+
+
+@media screen and (max-width: 1023px) {
+    .pagination  {
+        text-align: center;
+        display: block;
+        direction: rtl;
+    }
+    .img-title{
+        width: 100%;
+        margin-top: 3%;
+    }
 }
