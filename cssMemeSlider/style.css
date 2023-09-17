@@ -4,48 +4,60 @@
 
 .container {
     background-color: black;
-    max-width: 1920px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 20px 0;
-    /* min-height: 800px; */
-    /* height: 100%; */
 }
 .slider-heading {
     color: white;
-    font-size: 8qvm;
+    font-size: 4vmin;
     margin: 0 auto;
     text-align: center;
 }
 .slider {
-    border: 3px solid red;
     width: 50%;
     max-width: 550px;
     margin: 20px auto;
-    overflow: hidden;
+}
+.gallery::-webkit-scrollbar { 
+    display: none;
 }
 .gallery {
     display: flex;
-       
+    overflow-x: scroll;
+    border-radius: 2%;
+    scroll-behavior: smooth;
 }
 .gallery-img {
     display: block;    
     width: 100%;
     height: auto;
 }
-
-/* .slider {
-    padding: 20px 0 0 0;
-    width: 800px;
-    margin: auto;
-    overflow: hidden;
+.pagination {
+    text-align: right;
+    margin-top: 20px;
 }
-.gallery {
-    display: flex;
-    gap: 20px;
+.circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(160, 160, 160);
+    border: 3px solid rgb(160, 160, 160);
+    margin-right: 5px;  
 }
-.gallery-img {
-    width: 100%;
-    max-width: 550px;
-    height: auto;
-    
-} */
+.circle:hover {
+    background-color: white;
+    border: 3px solid white;
+    cursor: pointer;
+}
+.radio {
+    display: none;
+}
+#pag1:checked + .lab > .circle,
+#pag2:checked + .lab > .circle,
+#pag3:checked + .lab > .circle,
+#pag4:checked + .lab > .circle,
+#pag5:checked + .lab > .circle {
+    background-color: black;
+}

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="slider-heading">Memes English Humor</h1>
+        <h1 class="slider-heading">English Humor</h1>
         <div class="slider">
             <div class="gallery">
                 <img class="gallery-img" id="img1" src="/cssMemeSlider/assets/mem1.jpg" alt="Mem1">
@@ -17,7 +17,22 @@
                 <img class="gallery-img" id="img4" src="/cssMemeSlider/assets/mem4.jpg" alt="Mem4">
                 <img class="gallery-img" id="img5" src="/cssMemeSlider/assets/mem5.jpg" alt="Mem5">
             </div>
+            <div class="pag-container">                
+                <div class="pagination">
+                    <input checked id="pag1" class="radio" type="radio" name="pag" onclick="window.location.href = '#img1'">
+                        <label class="lab" for="pag1"><span class="circle"></span></label>
+                    <input id="pag2" class="radio" type="radio" name="pag" onclick="window.location.href = '#img2'">
+                        <label class="lab" for="pag2"><span class="circle"></span></label>
+                    <input id="pag3" class="radio" type="radio" name="pag" onclick="window.location.href = '#img3'">
+                        <label class="lab" for="pag3"><span class="circle"></span></label>
+                    <input id="pag4" class="radio" type="radio" name="pag" onclick="window.location.href = '#img4'">
+                        <label class="lab" for="pag4"><span class="circle"></span></label>
+                    <input id="pag5" class="radio" type="radio" name="pag" onclick="window.location.href = '#img5'">
+                        <label class="lab" for="pag5"><span class="circle"></span></label>
+                </div>
+            </div>
         </div>
+
     </div>
     
 </body>
