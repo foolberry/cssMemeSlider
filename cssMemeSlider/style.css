@@ -6,7 +6,7 @@
     background-color: black;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 1rem 0;
 }
 .slider-heading {
     color: white;
@@ -17,7 +17,7 @@
 .slider {
     width: 50%;
     max-width: 550px;
-    margin: 20px auto;
+    margin: 1rem auto;
 }
 .gallery::-webkit-scrollbar { 
     display: none;
@@ -33,23 +33,29 @@
     width: 100%;
     height: auto;
 }
-.pagination {
-
-}
 .circle {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     background-color: rgb(160, 160, 160);
-    border: 3px solid rgb(160, 160, 160);
-    margin-right: 5px;  
+    border: 0.2em solid rgb(160, 160, 160);
+    margin-right: 1%;  
 }
-.circle:hover {
+
+.lab:hover .circle {
     background-color: white;
-    border: 3px solid white;
+    border: 0.2em solid white;
+    /* cursor: pointer; */
+}
+.lab:hover {
     cursor: pointer;
 }
+.lab {
+    padding: 1%;
+}
+
+
 .radio {
     display: none;
 }
@@ -61,10 +67,11 @@
     background-color: black;
 }
 .img-title  {
+    padding: 1%;
     width: 60%;
     color: white;
     text-align: left;
-    font-size: 18px;
+    font-size: 1.3em;
     margin: 0;
 }
 .img-title p {
@@ -73,7 +80,7 @@
 }
 .pagination  {
     text-align: right;
-    margin-top: 20px;
+    margin-top: 5%;
     display: flex;    
     flex-direction: row-reverse;
     justify-content: space-between;
