@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: black;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+.slider-heading {
+    color: white;
+    font-size: 4vmin;
+    margin: 0 auto;
+    text-align: center;
+}
+.slider {
+    width: 50%;
+    max-width: 34.375rem;
+    margin: 1rem auto;
+}
+.gallery::-webkit-scrollbar { 
+    display: none;
+}
+.gallery {
+    display: flex;
+    overflow-x: scroll;
+    border-radius: 2%;
+    scroll-behavior: smooth;
+}
+.gallery-img {
+    display: block;    
+    width: 100%;
+    height: auto;
+}
+.circle {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgb(160, 160, 160);
+    border: 0.2em solid rgb(160, 160, 160);
+    margin-right: 1%;  
+}
+
+.lab:hover .circle {
+    background-color: white;
+    border: 0.2em solid white;
+    /* cursor: pointer; */
+}
+.lab:hover {
+    cursor: pointer;
+}
+.lab:active .circle {
+    background-color: rgb(200, 200, 200);
+    border: 0.2em solid rgb(200, 200, 200);
+    /* cursor: pointer; */
+}
+.lab {
+    padding: 1%;
+}
+.radio {
+    display: none;
+}
+#pag1:checked ~ .pag-container .pagination .lab > #circle1,
+#pag2:checked ~ .pag-container .pagination .lab > #circle2,
+#pag3:checked ~ .pag-container .pagination .lab > #circle3,
+#pag4:checked ~ .pag-container .pagination .lab > #circle4,
+#pag5:checked ~ .pag-container .pagination .lab > #circle5 {
+    background-color: black;
+}
+.img-title  {
+    padding: 1%;
+    width: 60%;
+    color: white;
+    text-align: left;
+    font-size: 1.3em;
+    margin: 0;
+}
+.img-title p {
+    margin: 0;
+    display: none;
+}
+.pagination  {
+    text-align: right;
+    margin-top: 5%;
+    display: flex;    
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#pag1:checked ~ .pag-container .pagination .img-title .img-title1,
+#pag2:checked ~ .pag-container .pagination .img-title .img-title2,
+#pag3:checked ~ .pag-container .pagination .img-title .img-title3,
+#pag4:checked ~ .pag-container .pagination .img-title .img-title4,
+#pag5:checked ~ .pag-container .pagination .img-title .img-title5 {
+    display: block;
+    animation-name: showTitle;
+    animation-duration: 1s;
+}
+@keyframes showTitle {
+    from {opacity: 0}
+    to {opacity: 1;}
+}
+
+#pag1:checked ~ .gallery .gallery-img {
+    transition: 500ms ease-in-out;
+    transform: translate(0%) ;
+}
+#pag2:checked ~ .gallery .gallery-img {
+    transition: 500ms ease-in-out;
+    transform: translate(-100%) ;
+}
+#pag3:checked ~ .gallery .gallery-img {
+    transition: 500ms ease-in-out;
+    transform: translate(-200%) ;
+}
+#pag4:checked ~ .gallery .gallery-img {
+    transition: 500ms ease-in-out;
+    transform: translate(-300%) ;
+}
+#pag5:checked ~ .gallery .gallery-img {
+    transition: 500ms ease-in-out;
+    transform: translate(-400%) ;
+}
+
+@media screen and (max-width: 1023px) {
+    .pagination  {
+        text-align: center;
+        display: block;
+        direction: rtl;
+    }
+    .img-title{
+        width: 100%;
+        margin-top: 3%;
+    }
+}
