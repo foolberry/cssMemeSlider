@@ -4,7 +4,7 @@
 
 .container {
     background-color: black;
-    max-width: 1440px;
+    max-width: 90rem;
     margin: 0 auto;
     padding: 1rem 0;
 }
@@ -16,7 +16,7 @@
 }
 .slider {
     width: 50%;
-    max-width: 550px;
+    max-width: 34.375rem;
     margin: 1rem auto;
 }
 .gallery::-webkit-scrollbar { 
@@ -51,11 +51,14 @@
 .lab:hover {
     cursor: pointer;
 }
+.lab:active .circle {
+    background-color: rgb(200, 200, 200);
+    border: 0.2em solid rgb(200, 200, 200);
+    /* cursor: pointer; */
+}
 .lab {
     padding: 1%;
 }
-
-
 .radio {
     display: none;
 }
